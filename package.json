@@ -1,0 +1,40 @@
+{
+  "name": "codebase-context-mcp",
+  "version": "1.0.0",
+  "description": "ARM64-compatible MCP server for codebase indexing and search using WASM-based tree-sitter",
+  "main": "dist/index.js",
+  "bin": {
+    "codebase-context-mcp": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "tree-sitter",
+    "codebase",
+    "search",
+    "arm64"
+  ],
+  "author": "Finit Solutions",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "glob": "^11.0.1",
+    "ignore": "^7.0.4",
+    "tree-sitter-wasms": "^0.1.13",
+    "web-tree-sitter": "^0.25.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
