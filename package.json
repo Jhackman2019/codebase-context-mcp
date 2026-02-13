@@ -2,6 +2,7 @@
   "name": "codebase-context-mcp",
   "version": "1.0.0",
   "description": "ARM64-compatible MCP server for codebase indexing and search using WASM-based tree-sitter",
+  "mcpName": "io.github.jhackman2019/codebase-context-mcp",
   "main": "dist/index.js",
   "bin": {
     "codebase-context-mcp": "dist/index.js"
@@ -15,12 +16,18 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jhackman2019/codebase-context-mcp.git"
+  },
   "keywords": [
     "mcp",
     "tree-sitter",
     "codebase",
     "search",
-    "arm64"
+    "arm64",
+    "wasm",
+    "code-indexing"
   ],
   "author": "Finit Solutions",
   "license": "MIT",

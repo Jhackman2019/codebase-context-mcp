@@ -37,6 +37,21 @@ export const LANGUAGE_CONFIGS: LanguageConfig[] = [
     wasmFile: 'tree-sitter-json.wasm',
     extensions: ['.json'],
   },
+  {
+    language: 'c_sharp',
+    wasmFile: 'tree-sitter-c_sharp.wasm',
+    extensions: ['.cs'],
+  },
+  {
+    language: 'vb_net',
+    wasmFile: '',  // Regex-based parser (no WASM grammar available)
+    extensions: ['.vb'],
+  },
+  {
+    language: 'xml',
+    wasmFile: '',  // Regex-based parser (no WASM grammar available)
+    extensions: ['.xml', '.xaml', '.xsl', '.xslt', '.xsd', '.svg', '.csproj', '.vbproj', '.sln', '.config', '.resx'],
+  },
 ];
 
 const extensionMap = new Map<string, LanguageConfig>();

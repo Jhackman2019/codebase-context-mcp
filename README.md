@@ -1,8 +1,16 @@
 # codebase-context-mcp
 
-ARM64-compatible MCP server for codebase indexing and search. Uses **WASM-based tree-sitter** — no native bindings, works everywhere: ARM64 (Raspberry Pi, Apple Silicon), x86_64, macOS, Linux, Windows.
+**MCP server for codebase indexing and search that works on every platform** — including ARM64 devices like Raspberry Pi and Apple Silicon where most alternatives fail.
 
-Built as a drop-in replacement for `@zilliz/claude-context-mcp` which requires native `tree-sitter` and `faiss-node` bindings that lack ARM64 prebuilts.
+## The Problem
+
+Popular codebase-indexing MCP servers like `@zilliz/claude-context-mcp` depend on native C++ bindings (`tree-sitter`, `faiss-node`) that ship pre-built binaries only for x86_64. If you're on **ARM64** — a Raspberry Pi, Apple Silicon Mac, AWS Graviton, or any other arm64 host — `npm install` fails with missing prebuilts and no fallback. There's no workaround short of cross-compiling the native modules yourself.
+
+## The Solution
+
+This package replaces every native dependency with a **WASM equivalent**. The tree-sitter parser runs as WebAssembly, search uses a pure-JS BM25 implementation, and the index is stored as plain JSON. Zero native bindings means `npm install` succeeds on the first try on **any** architecture: ARM64, x86_64, macOS, Linux, Windows.
+
+Drop-in compatible — provides the same core tools (index, search, outline, summary) via the standard MCP stdio transport.
 
 ## Tools
 
@@ -16,7 +24,7 @@ Built as a drop-in replacement for `@zilliz/claude-context-mcp` which requires n
 
 ## Supported Languages
 
-TypeScript, TSX, JavaScript, Python, CSS, JSON
+TypeScript, TSX, JavaScript, Python, C#, VB.NET, XML, CSS, JSON
 
 ## Install
 
