@@ -1,8 +1,8 @@
 {
   "name": "codebase-context-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ARM64-compatible MCP server for codebase indexing and search using WASM-based tree-sitter",
-  "mcpName": "io.github.jhackman2019/codebase-context-mcp",
+  "mcpName": "io.github.Jhackman2019/codebase-context-mcp",
   "main": "dist/index.js",
   "bin": {
     "codebase-context-mcp": "dist/index.js"

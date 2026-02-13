@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.jhackman2019/codebase-context-mcp",
-  "description": "ARM64-compatible MCP server for codebase indexing and search. Uses WASM-based tree-sitter — no native bindings required. Works on ARM64 (Raspberry Pi, Apple Silicon), x86_64, macOS, Linux, and Windows. Supports TypeScript, JavaScript, Python, C#, VB.NET, XML, CSS, and JSON.",
+  "name": "io.github.Jhackman2019/codebase-context-mcp",
+  "description": "Codebase indexing and search via WASM tree-sitter. Works on ARM64 and x86_64.",
   "repository": {
     "url": "https://github.com/Jhackman2019/codebase-context-mcp",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "codebase-context-mcp",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       }
